@@ -6,7 +6,6 @@
   <title>Jayesh Mhatre</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-+mruS+Poq0m2q6rplQoU+9D+1yPfWvXlqHuKdpvE1ZshmC+eHqC3Hv+53X4j0wq0bT28ZThhK+x8CwzZtK5nUw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     :root {
       --bg: linear-gradient(135deg, #f9fbff 0%, #eef3f9 100%);
@@ -44,16 +43,7 @@
       transition: all 0.3s ease;
     }
 
-    .container:hover {
-      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 30px;
-      align-items: flex-start;
-    }
+    .grid { display: grid; grid-template-columns: 280px 1fr; gap: 30px; align-items: flex-start; }
 
     .profile {
       background: linear-gradient(180deg, rgba(43, 111, 249, 0.07), rgba(255, 255, 255, 0.9));
@@ -68,156 +58,64 @@
     }
 
     .avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      font-weight: 700;
-      font-size: 38px;
-      background: linear-gradient(135deg, #e5ecff, #cfdcff);
-      color: var(--accent);
-      border: 4px solid rgba(43, 111, 249, 0.25);
+      width: 120px; height: 120px; border-radius: 50%; display: grid; place-items: center;
+      font-weight: 700; font-size: 38px; background: linear-gradient(135deg, #e5ecff, #cfdcff);
+      color: var(--accent); border: 4px solid rgba(43, 111, 249, 0.25);
     }
 
     h1 { margin: 0; font-size: 22px; color: #111827; }
     p.role { margin: 0; color: var(--muted); font-size: 14px; }
 
-    .contacts {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-top: 8px;
-    }
+    .contacts { width: 100%; display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
 
     .contact {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 12px 14px;
-      border-radius: 12px;
-      background: #f8fafc;
-      cursor: pointer;
-      transition: all .25s ease;
-      border: 1px solid var(--border);
-      flex-wrap: wrap;
+      display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 12px;
+      background: #f8fafc; cursor: pointer; transition: all .25s ease; border: 1px solid var(--border);
+      flex-wrap: nowrap; align-items: center;
     }
 
     .contact:hover {
-      background: var(--accent-light);
-      border-color: var(--accent);
-      transform: translateY(-3px);
+      background: var(--accent-light); border-color: var(--accent); transform: translateY(-3px);
       box-shadow: 0 6px 16px rgba(43, 111, 249, 0.15);
     }
 
     .icon {
-      width: 46px;
-      height: 46px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      color: #fff;
-      font-size: 22px;
-      flex-shrink: 0;
-      transition: all 0.3s ease;
-      align-self: flex-start;
-      margin-top: 2px;
-      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+      width: 54px; height: 54px; display: flex; align-items: center; justify-content: center;
+      border-radius: 50%; color: #fff; font-size: 24px; flex-shrink: 0; transition: all 0.25s ease;
+      align-self: center; box-shadow: 0 3px 10px rgba(0,0,0,0.15);
     }
 
-    .contact:hover .icon {
-      transform: scale(1.15);
-      filter: brightness(1.1);
-    }
+    .contact:hover .icon { transform: scale(1.15); filter: brightness(1.1); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
 
-    /* More visible icon colors */
-    .whatsapp { background: #22bb5b; } /* darker green */
-    .email { background: #d93025; } /* deeper red */
-    .instagram { background: radial-gradient(circle at 30% 30%, #eab54f, #c13584, #833ab4, #5851db); } /* stronger contrast */
-    .linkedin { background: #0A66C2; } /* already good */
+    .telegram { background: radial-gradient(circle at top left, #29A9EB, #0088CC); }
+    .email { background: radial-gradient(circle at top left, #EA4335, #B31412); }
+    .linkedin { background: radial-gradient(circle at top left, #0077B5, #004182); }
+    .instagram { background: radial-gradient(circle at 30% 30%, #FEDA75, #D62976, #962FBF, #4F5BD5); }
 
-    .contact .meta {
-      font-size: 14px;
-      word-break: break-all;
-      overflow-wrap: anywhere;
-      line-height: 1.4;
-    }
-
+    .contact .meta { font-size: 14px; word-break: break-word; overflow-wrap: anywhere; line-height: 1.35; }
     .muted { color: var(--muted); font-size: 12px; }
-
-    .highlight {
-      color: var(--accent);
-      font-weight: 600;
-    }
+    .highlight { color: var(--accent); font-weight: 600; }
 
     .main { padding: 6px 4px; }
     .headline { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
     .headline h2 { margin: 0; font-size: 20px; color: #111827; }
-    .cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 16px;
-      border-radius: 10px;
-      background: linear-gradient(90deg, var(--accent), #4a8dfc);
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      box-shadow: 0 4px 12px rgba(43, 111, 249, 0.25);
-      transition: all 0.3s ease;
-    }
-
-    .cta:hover {
-      background: linear-gradient(90deg, #4a8dfc, #6ea6ff);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(43, 111, 249, 0.3);
-    }
+    .cta { display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 10px;
+      background: linear-gradient(90deg, var(--accent), #4a8dfc); color: white; text-decoration: none; font-weight: 600;
+      box-shadow: 0 4px 12px rgba(43, 111, 249, 0.25); transition: all 0.3s ease; }
+    .cta:hover { background: linear-gradient(90deg, #4a8dfc, #6ea6ff); transform: translateY(-2px); box-shadow: 0 6px 18px rgba(43, 111, 249, 0.3); }
 
     .bio { margin-top: 16px; color: #374151; line-height: 1.65; }
 
-    .socials {
-      display: flex;
-      gap: 10px;
-      margin-top: 18px;
-      flex-wrap: wrap;
-    }
-
-    .socials a {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 12px;
-      border-radius: 10px;
-      background: #f3f4f6;
-      text-decoration: none;
-      color: #1f2937;
-      font-weight: 600;
-      border: 1px solid var(--border);
+    .skills { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+    .skill {
+      display: flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 10px;
+      background: #f3f4f6; color: #1f2937; border: 1px solid var(--border); font-weight: 600;
       transition: all 0.25s ease;
     }
+    .skill svg { width: 22px; height: 22px; fill: var(--accent); }
+    .skill:hover { background: var(--accent-light); border-color: var(--accent); color: var(--accent); transform: translateY(-3px); }
 
-    .socials a:hover {
-      background: var(--accent-light);
-      border-color: var(--accent);
-      color: var(--accent);
-      transform: translateY(-2px);
-    }
-
-    footer {
-      margin-top: 26px;
-      color: #6b7280;
-      font-size: 13px;
-      text-align: center;
-    }
-
-    @media (max-width: 720px) {
-      .grid { grid-template-columns: 1fr; }
-      .profile { flex-direction: row; align-items: center; text-align: left; }
-      .avatar { width: 88px; height: 88px; font-size: 24px; }
-      .contact .meta { font-size: 13px; }
-    }
+    footer { margin-top: 26px; color: #6b7280; font-size: 13px; text-align: center; }
   </style>
 </head>
 <body>
@@ -231,24 +129,24 @@
         </div>
 
         <div class="contacts" aria-label="contacts">
-          <a class="contact" href="https://wa.me/8237755515" target="_blank" rel="noopener noreferrer">
-            <div class="icon whatsapp"><i class="fab fa-whatsapp"></i></div>
-            <div class="meta">8237755515 <div class="muted">WhatsApp / Call</div></div>
+          <a class="contact" href="https://t.me/jayeshh27" target="_blank" rel="noopener noreferrer">
+            <div class="icon telegram"><svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="26" height="26"><path d="M9.03 14.83 8.8 18a.74.74 0 0 0 1.17.64l2.63-1.9 3.1 2.27a.74.74 0 0 0 1.18-.48l2.15-13.38A.75.75 0 0 0 18.3 4L4.3 9.67a.75.75 0 0 0 .05 1.4l4.68 1.68Z"/></svg></div>
+            <div class="meta"><span class="highlight">@jayeshh27</span> <div class="muted">Telegram</div></div>
           </a>
 
           <a class="contact" href="mailto:jayeshh27@zohomail.in">
-            <div class="icon email"><i class="fas fa-envelope"></i></div>
-            <div class="meta"><span class="highlight">jayeshh27</span>@zohomail.in <div class="muted">Email me (ZohoMail)</div></div>
-          </a>
-
-          <a class="contact" href="https://instagram.com/jayeshh27" target="_blank" rel="noopener noreferrer">
-            <div class="icon instagram"><i class="fab fa-instagram"></i></div>
-            <div class="meta"><span class="highlight">jayeshh27</span> <div class="muted">Instagram</div></div>
+            <div class="icon email"><svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="26" height="26"><path d="M2 4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H2zm0 2 10 7L22 6v12H2V6z"/></svg></div>
+            <div class="meta"><span class="highlight">jayeshh27</span>@zohomail.in <div class="muted">Email · ZohoMail</div></div>
           </a>
 
           <a class="contact" href="https://www.linkedin.com/in/jayeshh27" target="_blank" rel="noopener noreferrer">
-            <div class="icon linkedin"><i class="fab fa-linkedin-in"></i></div>
+            <div class="icon linkedin"><svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="26" height="26"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0V8zm7.98 0h4.78v2.2h.07c.67-1.26 2.3-2.6 4.74-2.6C22.58 7.6 24 10.1 24 14.2V24h-5v-9c0-2.16-.77-3.63-2.7-3.63-1.47 0-2.34.99-2.72 1.95-.14.34-.18.81-.18 1.29V24h-5V8z"/></svg></div>
             <div class="meta">LinkedIn <div class="muted">/in/<span class="highlight">jayeshh27</span></div></div>
+          </a>
+
+          <a class="contact" href="https://instagram.com/jayeshh27" target="_blank" rel="noopener noreferrer">
+            <div class="icon instagram"><svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="26" height="26"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm0 2h10c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3zm10 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/></svg></div>
+            <div class="meta"><span class="highlight">@jayeshh27</span> <div class="muted">Instagram</div></div>
           </a>
         </div>
       </aside>
@@ -259,12 +157,19 @@
           <a class="cta" href="mailto:jayeshh27@zohomail.in">Get in touch</a>
         </div>
 
-        <p class="bio">I'm a DevOps Engineer specializing in automation, CI/CD pipelines, and cloud infrastructure. I design scalable systems that bridge development and operations — improving deployment efficiency, reliability, and performance. This page is a simple gateway to connect and collaborate on technology, automation, and innovation.</p>
+        <p class="bio">I'm a DevOps Engineer specializing in automation, CI/CD pipelines, and cloud infrastructure. I design scalable systems that bridge development and operations — improving deployment efficiency, reliability, and performance.</p>
 
-        <div class="socials" aria-label="social links">
-          <a href="https://instagram.com/jayeshh27" target="_blank" rel="noopener noreferrer">Instagram · <span class="highlight">jayeshh27</span></a>
-          <a href="https://www.linkedin.com/in/jayeshh27" target="_blank" rel="noopener noreferrer">LinkedIn · /in/<span class="highlight">jayeshh27</span></a>
-          <a href="mailto:jayeshh27@zohomail.in">Email · <span class="highlight">jayeshh27</span>@zohomail.in</a>
+        <div class="skills" aria-label="DevOps Skills">
+          <div class="skill"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v2H3zM3 7h18v2H3zM3 11h18v2H3zM3 15h18v2H3zM3 19h18v2H3z"/></svg>Azure</div>
+          <div class="skill"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>AWS</div>
+          <div class="skill"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 4h20v2H2zM2 8h20v2H2zM2 12h20v2H2zM2 16h20v2H2zM2 20h20v2H2z"/></svg>Azure DevOps</div>
+          <div class="skill"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l10 6-10 6-10-6zM2 14l10 6 10-6"/></svg>GitLab</div>
+          <div class="skill"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2L2 7v7c0 5 4 8 10 8s10-3 10-8V7z"/></svg>GitHub</div>
+          <div class="skill"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l9 4.5-9 4.5-9-4.5zM3 13l9 4.5 9-4.5"/></svg>Terraform</div>
+          <div class="skill"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 4h16v2H4zm2 4h12v2H6zm-2 4h16v2H4zm2 4h12v2H6zm-2 4h16v2H4z"/></svg>Ansible</div>
+          <div class="skill"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>Kubernetes</div>
+          <div class="skill"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 4h16v2H4zm2 4h12v2H6zm-2 4h16v2H4zm2 4h12v2H6zm-2 4h16v2H4z"/></svg>Shell Scripting</div>
+          <div class="skill"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v2H3zM3 7h18v2H3zM3 11h18v2H3zM3 15h18v2H3zM3 19h18v2H3z"/></svg>CI/CD Pipelines</div>
         </div>
 
         <footer>&copy; <span id="year"></span> Jayesh Mhatre — DevOps Engineer.</footer>
